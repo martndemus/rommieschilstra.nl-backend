@@ -1,0 +1,13 @@
+language: elixir
+elixir:
+  - 1.2.1
+otp_release:
+  - 18.0
+
+sudo: false
+
+addons:
+  postgresql: '9.4'
+
+after_install:
+  - mix ecto.create, mix ecto.migrate
